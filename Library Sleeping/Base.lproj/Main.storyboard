@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,67 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Library_Sleeping" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xWE-UW-Zo3">
+                                <rect key="frame" x="0.0" y="202" width="375" height="313"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="313" id="lb5-by-dCx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="People Sleeping in the Library" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fik-uM-bDf">
+                                <rect key="frame" x="79" y="135" width="228" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruE-Vk-s2s">
+                                <rect key="frame" x="115" y="596" width="156" height="37"/>
+                                <color key="backgroundColor" red="0.98539485039999997" green="0.42500479740000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="bRT-Al-UTv"/>
+                                </constraints>
+                                <state key="normal" title="Get New Image"/>
+                                <connections>
+                                    <action selector="getsNewImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e2w-9M-NSO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currently" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iau-3J-v7E">
+                                <rect key="frame" x="115" y="534" width="134" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xWE-UW-Zo3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="25" id="3iv-TV-via"/>
+                            <constraint firstItem="xWE-UW-Zo3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6qP-fI-BOd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ruE-Vk-s2s" secondAttribute="bottom" constant="34" id="7St-8s-vTj"/>
+                            <constraint firstAttribute="bottom" secondItem="iau-3J-v7E" secondAttribute="bottom" constant="112" id="D7g-f6-Sav"/>
+                            <constraint firstItem="iau-3J-v7E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="115" id="DPX-Io-aDA"/>
+                            <constraint firstItem="iau-3J-v7E" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-5.5" id="Oux-eC-Vuc"/>
+                            <constraint firstItem="ruE-Vk-s2s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="115" id="QS9-SI-iCz"/>
+                            <constraint firstItem="xWE-UW-Zo3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="d5E-B1-Y0Q"/>
+                            <constraint firstItem="ruE-Vk-s2s" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="5.5" id="dlw-bx-5LA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ruE-Vk-s2s" secondAttribute="trailing" constant="104" id="oth-lB-keP"/>
+                            <constraint firstItem="Fik-uM-bDf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="5.5" id="pUT-vw-9RE"/>
+                            <constraint firstItem="Fik-uM-bDf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="115" id="psK-jk-vhI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageTitle" destination="iau-3J-v7E" id="HIM-86-XA2"/>
+                        <outlet property="imageView" destination="xWE-UW-Zo3" id="n0d-UM-tW1"/>
+                        <outlet property="newImageButton" destination="ruE-Vk-s2s" id="728-FI-ZVv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>
